@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moodify — Mood-Based Music</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="https://unpkg.com/face-api.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">🎵 Moodify</div>
+    <div class="status" id="status">ready</div>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <div class="camera-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="mood-chip" id="moodChip">Mood: —</div>
+      </div>
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Start camera & scan</button>
+        <button id="stopBtn" class="btn">Stop</button>
+      </div>
+      <div class="tip">Tip: click <b>Start</b> once to allow camera and audio playback.</div>
+    </section>
+
+    <section class="right player-card">
+      <h2 class="section-title">Now Playing</h2>
+      <div class="track-info">
+        <div class="cover" aria-hidden="true">♪</div>
+        <div>
+          <div id="trackTitle" class="track-title">—</div>
+          <div id="trackMood" class="track-mood">—</div>
+        </div>
+      </div>
+
+      <audio id="audio" controls></audio>
+
+      <div class="quote" id="quote">Let’s find the right vibe for you.</div>
+
+      <div class="manual-mood">
+        <label for="moodSelect">Or pick a mood manually:</label>
+        <select id="moodSelect">
+          <option value="happy">happy</option>
+          <option value="sad">sad</option>
+          <option value="angry">angry</option>
+          <option value="neutral">neutral</option>
+          <option value="surprised">surprised</option>
+          <option value="fearful">fearful</option>
+          <option value="disgusted">disgusted</option>
+        </select>
+        <button id="playMoodBtn" class="btn">Play for mood</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Prototype · Made for learning · face-api.js runs on-device.</small>
+  </footer>
+</body>
+</html>
