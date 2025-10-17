@@ -1,0 +1,206 @@
+Title: 🎵 Build a Complete Spotify-Like Music Streaming Platform with AI Mood Detection
+
+Prompt:
+
+Build a complete full-stack music streaming application, inspired by Spotify — designed for scalability, personalization, and AI-driven mood recognition.
+
+The goal is to generate an end-to-end product structure (UI + backend + AI modules + database + APIs).
+
+1️⃣ App Concept & Core Description
+
+Create a web and mobile-friendly platform called “Moodify+” that:
+
+Streams high-quality audio using adaptive streaming (HLS/DASH)
+
+Allows users to log in, browse songs, create playlists, and follow artists
+
+Uses AI facial mood detection via the webcam to recommend playlists based on user emotion
+
+Includes an integrated AI recommendation engine that personalizes playlists by user history, emotions, and listening habits
+
+Offers both Free (ad-supported) and Premium (ad-free) plans
+
+2️⃣ Core Features to Build
+
+User & Authentication:
+
+Email/OAuth login
+
+User dashboard with playlists, liked songs, and history
+
+Profile customization and subscription management
+
+Music Streaming System:
+
+Upload / ingest songs (MP3, FLAC) with automatic transcoding via FFmpeg
+
+Adaptive bitrate streaming (128kbps/320kbps) using HLS
+
+Real-time player (play/pause/seek/next/queue)
+
+Lyrics sync & album art
+
+AI Mood Detection Module:
+
+Use the user’s camera (WebcamJS / MediaPipe)
+
+Detect emotions (happy, sad, relaxed, angry, excited) using OpenCV + TensorFlow
+
+Map mood → playlists using recommendation logic
+
+Display “Now playing based on your mood” banner
+
+Recommendation System:
+
+Hybrid model combining collaborative filtering (user-listen data) + content-based (song audio features via Librosa)
+
+Personalized playlists like “For You”, “Discover Weekly”, “MoodMix”
+
+Trending section based on global play counts
+
+Playlist Management:
+
+Create / delete / share playlists
+
+Collaborative playlists
+
+Auto-generate mood playlists
+
+Social Layer:
+
+Follow friends & artists
+
+Activity feed (recently played, shared tracks)
+
+Share music to social media
+
+Admin Dashboard:
+
+Upload songs, edit metadata, view analytics
+
+Manage artists, labels, and licenses
+
+Payments:
+
+Stripe integration for subscriptions
+
+Role-based content access (premium vs free)
+
+Search:
+
+Meilisearch / Elasticsearch for fast song and artist lookup
+
+Analytics:
+
+Real-time play tracking, retention, most played songs
+
+Basic user engagement dashboard
+
+Tech Add-ons:
+
+Dark mode UI
+
+PWA (Progressive Web App) support
+
+Notifications for new music releases
+
+3️⃣ Technology Stack
+
+Frontend:
+
+React + Tailwind CSS (Web)
+
+React Native or Flutter (Mobile)
+
+Howler.js or HLS.js for audio streaming
+
+Backend:
+
+Node.js (Express.js) or Python (FastAPI)
+
+REST/GraphQL API
+
+Authentication: OAuth2 + JWT
+
+Database:
+
+PostgreSQL (user, music, playlist data)
+
+Redis (caching + sessions)
+
+Storage & Streaming:
+
+AWS S3 (audio storage)
+
+AWS CloudFront (CDN for streaming)
+
+FFmpeg for transcoding jobs
+
+Machine Learning:
+
+OpenCV + dlib for facial emotion detection
+
+TensorFlow/PyTorch model for mood classification
+
+Librosa for audio feature extraction
+
+Infrastructure:
+
+Dockerized microservices
+
+CI/CD with GitHub Actions
+
+Deployment on AWS / Render / Vercel
+
+4️⃣ Architecture Overview
+
+Generate a system diagram showing:
+
+Frontend → API Gateway → Microservices
+
+User Service / Music Service / Mood AI Service / Recommendation Engine / Auth Service
+
+Database connections + CDN for content delivery
+
+5️⃣ UI Design Instructions
+
+Minimal, music-focused interface with glassmorphism / neon accent theme (black + green)
+
+Include screens for:
+
+Home / Discover / Search / Library / Profile
+
+Player view with waveform animation
+
+Mood detection popup (camera view + mood result)
+
+Playlist editor
+
+Admin dashboard (analytics + upload UI)
+
+6️⃣ Outputs Expected
+
+Full design structure and component hierarchy
+
+Suggested API endpoints (CRUD + streaming routes)
+
+Database schema (tables for user, songs, playlists, moods, subscriptions)
+
+Example code snippets for player and mood detection integration
+
+Flow diagram (login → mood scan → recommendation → playback)
+
+Deployment pipeline overview
+
+7️⃣ Tone & Goal
+
+Treat this as a real, build-ready app (not a concept deck).
+
+Output should include architecture + sample code for each core module.
+
+Use professional developer naming conventions and scalable best practices.
+
+Visualize the app flow like a real SaaS project with modern design principles.
+
+Final instruction:
+Build everything in a developer-first format — combine design + code blueprints + architecture diagrams + data models — so I can directly use it as the foundation to start building the app.
